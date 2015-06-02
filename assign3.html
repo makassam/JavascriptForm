@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>Coop Form</title>
+	<meta charset="UTF-8">
+	<link href='a3.css' media='screen' rel='stylesheet' type='text/css'>
+	<script src="a3.js"></script>
+</head>
+<body>
+	
+		<form action="http://formpost.azurewebsites.net/home/test" 
+				method="post" onsubmit="return formValidation()">
+				<div id ="maindiv">
+				
+				<img id="ai1" src="images/logo.png" width="200" style="padding:1em">
+				<h2 id = "change">Coop Program Application Form </h2>
+				<p>&nbsp;&nbsp;&nbsp;Required fields are followed by
+				<strong><abbr title="required">*</abbr></strong></p>
+			<h3>&nbsp;&nbsp;Basic Information</h3>
+			<section id="section1">
+				
+				 <p>
+					<label for="firstname">
+					<a title=" First Name must be upper or lower case alphabetic characters">
+						<span>First Name: </span></a>
+						<input type="text" id="fname" name="firstname" required  autofocus />
+						<strong><abbr title="required">*</abbr></strong>
+					</label>
+				</p>
+				<p>
+					<label for="lastname">
+						<a title=" First Name must be upper or lower case alphabetic characters">
+						<span>Last Name: </span></a>
+						<input type="text" id="lname" name="lastname" required />
+						<strong><abbr title="required">*</abbr></strong>
+					</label>
+				</p>
+				<p>
+					<label for="studid">
+					<a title= "This field must be present and 10 digits only">
+						<span>Student ID: </span></a>
+						<input type="text" id="sid" name="Student_ID" required />
+						<strong><abbr title="required">*</abbr></strong>
+					</label>
+				</p>
+				<p>
+					<label for="learnid">
+					<a title="The 1st Character of the Field ID must be the same as the First Name's first character followed by the Full Last Name ">
+						<span>Learn ID: </span></a>
+						<input type="text" id="lid" name="Learn_ID" required  />
+						<strong><abbr title="required">*</abbr></strong>
+					</label>
+				</p>
+				<p>
+					<label for="email">
+					<a title="This is automatically generated upon submission and valid information">
+						<span>Email: </span></a>
+						<input type="text" id="email" name="Email" readonly value="" />
+					</label>
+				</p>
+				<p>
+					<label for="phone">
+					<a title=" Must be in the format (999)999-999 and numeric digits only">
+						<span>Phone Number: </span></a>
+						<input type="text" id="pnumber" name="Phone_number" placeholder="(999)999-999" required />
+						<strong><abbr title="required">*</abbr></strong>
+					</label>
+				</p>
+				<p>
+					<label for="adress">
+					<a title=" A valid adress must be entered">
+						<span>Address: </span></a>
+						<input type="text" id="add" name="Address" required />
+						<strong><abbr title="required">*</abbr></strong>
+					</label>
+				</p>
+				<p>
+					<label for="City">
+					<a title=" A valid City must be entered">
+						<span>City: </span></a>
+						<input type="text" id="add" name="City" required />
+						<strong><abbr title="required">*</abbr></strong>
+					</label>
+				</p>
+				
+					<label for="province">
+					<a title=" A selection must be made">
+						<p><span>Province: </span></a>
+						<select  id="se1" size="4" required>
+							<optgroup label="Province" >
+								<option value="AB"> Alberta </option>
+								<option value="BC"> British Columbia </option>
+								<option value="MB"> Manitoba </option>
+								<option value="NB"> New Brunswick </option>
+								<option value="NL"> New Foundland and Labrador </option>
+								<option value="NS"> Nova Scotia </option>
+								<option value="ON"> Ontario </option>
+								<option value="PE"> Prince Edward Island </option>
+								<option value="QC"> Quebec </option>
+								<option value="SK"> Saskatchewan </option>
+							</optgroup>
+							<optgroup label="Territories">
+								<option value="NT"> Northwest Territories</option>
+								<option value="NU"> Nunavut</option>
+								<option value="YT"> Yukon</option>
+							</optgroup>
+						</select>
+						<strong><abbr title="required">*</abbr></strong>
+					</label>
+				</p>
+		
+			</section><br>
+			<h3>&nbsp;&nbsp;Education</h3>
+			<section id="section2">
+					
+						 <p>
+							<label for="school">
+							<a title=" A school name must be provided">
+								<span>School: </span></a>
+								<input type="text" id="skool" name="school" required />
+								<strong><abbr title="required">*</abbr></strong>
+							</label>
+						</p>
+						 <p>
+							<label for="program">
+							<a title=" A program must be provided">
+								<span>Program: </span></a>
+								<input type="text" id="program" name="program" required />
+								<strong><abbr title="required">*</abbr></strong>
+							</label>
+						</p>
+						 <p>
+							<label for="education">
+							<a title=" Optional">
+								<span>Education Level: </span></a>
+								<input type="text" id="edu" name="Education" />
+							</label>
+						</p>
+							<fieldset>
+								<legend>Education Status</legend>
+								<ul>
+									<label for="Graduated">
+										<input type="radio" id="grad" name="graduated"  />
+											Graduated<br>
+										<input type="radio" id="cur" name="current" />
+											Currently Enrolled<br>
+										<input type="radio" id="didnot" name="Did Not Graduate" />
+											Did Not Graduate
+									</label>
+								</ul>
+								
+							 </fieldset>
+							  <p>
+								<label for="date">
+								<a title=" Optional">
+									<span>Graduation Date: </span></a>
+									<input type="date" id="dte" name="Graduation_date"  />
+								</label>
+							  </p>
+			</section><br>
+			<h3>&nbsp;&nbsp;Work Experience</h3>
+			<section id="section3">
+						 <p>
+							<label for="employer">
+							<a title="Optional">
+								<span>Employer: </span></a>
+								<input type="text" id="emp" name="employer"  />
+							</label>
+						</p>
+						 <p>
+							<label for="Jobtitle">
+							<a title=" Optional">
+								<span>Job Title: </span></a>
+								<input type="text" id="jobt" name="jobtitle"  />
+							</label>
+						</p>
+						<p>
+							<label for="JobDuty">
+							<a title= "Optional">
+								<span>Job Duty: </span></a>
+								<textarea id="tx1"> </textarea>
+							</label>
+						</p>
+						<p>
+							<label for="work">
+							<a title=" Optional">
+								<span>Worked year: </span></a>
+								<input type="number" id="work" name="wrkyear" min="0" max="20"   />
+							</label>
+						</p>
+				</section><br>
+				<h3>&nbsp;&nbsp;Attachments</h3>
+                <section id="section4">
+                        <label for="file">
+                            <span> Attachments: </span>
+                                <input type="file" name="Ass" multiple>
+                        </label>
+                </section>
+                        <p>
+						  &nbsp;&nbsp; <input id= "ip1" type="reset" value='Reset' Onclick='clearShowErrors();' /> &nbsp;
+						  <input id= "ip2" type="submit"  value="Apply"/>  
+						</p>
+    
+			<div id="errors"></div>
+                
+			<footer>
+				<h4>
+					<script type='text/javascript'>
+									dt=new Date(document.lastModified);
+									document.write("This page was last updated on " +
+									dt.toLocaleString())
+					</script> <br>
+					
+					<a href="http://validator.w3.org/check?uri=https://scs.senecac.on.ca/~int222_143d11/assign3/assign3.html;No200=1">
+		<img src="https://scs.senecac.on.ca/~wei.song/int222/images/vhtml5.png" alt="Valid HTML 5" title="Valid HTML 5" height="25" width="71">
+      </a>
+      <a href="http://jigsaw.w3.org/css-validator/validator?uri=https://zenit.senecac.on.ca/~int222_143d11/assign3/a3.css">
+      <img src="https://scs.senecac.on.ca/~wei.song/int222/images/vcss.png" alt="Valid CSS" height="25" width="71" /></a>
+			
+			
+			
+			</footer>
+	</div>
+		</form>
+	
+
+</body>
+</html>
